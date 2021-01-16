@@ -21,4 +21,7 @@
   <ItemGroup>
     <Folder Include="ViewModels\" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Remove="Views\Students\Delete.cshtml" />
+  </ItemGroup>
 </Project>

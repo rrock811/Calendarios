@@ -9,6 +9,8 @@ namespace Slaves.Web.Data
 {
 	public class ApplicationDbContext : IdentityDbContext
 	{
+		//dotnet ef migrations add migrationName
+
 		public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
 		{
 

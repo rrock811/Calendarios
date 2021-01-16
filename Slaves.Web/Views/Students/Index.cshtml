@@ -3,9 +3,12 @@
     ViewData["Title"] = "Студенты";
 }
 
+<a asp-action="Create" class="btn btn-outline-primary mb-3">Создать</a>
+
 <table class="table table-hover table-bordered">
     <thead>
         <tr>
+            <th width="1%"></th>
             <th>@Html.DisplayNameFor(s => s.LastName)</th>
             <th>@Html.DisplayNameFor(s => s.FirstName)</th>
             <th>@Html.DisplayNameFor(s => s.MiddleName)</th>
@@ -16,10 +19,16 @@
         @foreach(var item in Model)
 		{
             <tr>
+                <td>
+                    <div class="btn-group">
+                        <a class="btn btn-outline-secondary btn-sm" asp-action="Update" asp-route-Id="@item.Id"><i class="fas fa-pencil-alt"></i></a>
+                        <a class="btn btn-outline-secondary btn-sm" asp-action="Delete" asp-route-Id="@item.Id"><i class="fas fa-trash"></i></a>
+                    </div>
+                </td>
                 <td>@item.LastName</td>
                 <td>@item.FirstName</td>
                 <td>@item.MiddleName</td>
-                <td>@item.DateBirth</td>
+                <td>@item.DateBirth.ToString("dd.MM.yyyy")</td>
             </tr>
 		}
     </tbody>

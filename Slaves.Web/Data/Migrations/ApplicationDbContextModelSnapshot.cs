@@ -215,6 +215,7 @@ namespace Slaves.Web.Data.Migrations
             modelBuilder.Entity("Slaves.Web.Models.Discipline", b =>
                 {
                     b.Property<string>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Name")
@@ -228,15 +229,18 @@ namespace Slaves.Web.Data.Migrations
             modelBuilder.Entity("Slaves.Web.Models.Student", b =>
                 {
                     b.Property<string>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("TEXT");
 
                     b.Property<DateTime>("DateBirth")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("FirstName")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("LastName")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("MiddleName")
