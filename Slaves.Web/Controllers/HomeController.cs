@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Slaves.Web.Models;
+using Slaves.Web.ViewModels;
 
 namespace Slaves.Web.Controllers
 {
