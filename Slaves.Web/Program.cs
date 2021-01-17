@@ -15,7 +15,7 @@ namespace Slaves.Web
 				.ConfigureWebHostDefaults(webBuilder =>
 				{
 					webBuilder.UseStartup<Startup>()
-					.UseUrls("https://localhost:5001;https://192.168.1.33:5001");
+					.UseUrls("https://localhost:5001;https://192.168.31.175:5001;http://192.168.31.175:5000");
 				});
 	}
 }
